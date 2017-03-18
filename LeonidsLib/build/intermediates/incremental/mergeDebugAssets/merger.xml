@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\Simon\Works\Android\Git\MagicPen\LeonidsLib\src\main\assets"/><source path="D:\Simon\Works\Android\Git\MagicPen\LeonidsLib\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="D:\Simon\Works\Android\Git\MagicPen\LeonidsLib\src\debug\assets"/></dataSet></merger>
