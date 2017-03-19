@@ -23,13 +23,26 @@ public class StarPen extends BasePen {
 
     @Override
     ParticleSystem createParticleSystem(int x, int y, int type) {
-        ParticleSystem ps = new ParticleSystem(activity, 50, R.drawable.star, 2500, backgroundResId);
+        ParticleSystem ps;
+        switch (type) {
+            case 0:
+                ps = createStar(x, y);
+                break;
+            default:
+                ps = createFakeParticle();
+        }
+
+        return ps;
+    }
+
+    private ParticleSystem createStar(int x, int y) {
+        ParticleSystem ps = new ParticleSystem(activity, 70, R.drawable.star, 2500, backgroundResId);
         ps.setScaleRange(0.3f, 1.2f);
         ps.setSpeedRange(0.10f, 0.2f);
         ps.setRotationSpeedRange(180, 360);
         ps.setInitialRotationRange(0, 180);
         ps.setFadeOut(1000, new AccelerateInterpolator());
-        ps.emit(x, y, 5);
+        ps.emit(x, y, 20);
         return ps;
     }
 }
