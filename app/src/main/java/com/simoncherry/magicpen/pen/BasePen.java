@@ -14,7 +14,7 @@ import java.util.List;
 
 public abstract class BasePen {
 
-    private List<List<ParticleSystem>> particleList = new ArrayList<>();
+    public List<List<ParticleSystem>> particleList = new ArrayList<>();
     public Activity activity;
     public int backgroundResId;
 
