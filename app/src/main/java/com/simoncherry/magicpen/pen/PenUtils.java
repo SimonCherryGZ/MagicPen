@@ -38,7 +38,7 @@ public class PenUtils {
             R.drawable.pen_gel, R.drawable.pen_default, R.drawable.pen_default, R.drawable.pen_default, R.drawable.pen_default,
             R.drawable.pen_default, R.drawable.pen_default, R.drawable.pen_clover, R.drawable.pen_default, R.drawable.pen_flower,
             R.drawable.pen_colorful, R.drawable.pen_default, R.drawable.pen_default, R.drawable.pen_default, R.drawable.pen_default,
-            R.drawable.pen_star, R.drawable.pen_default, R.drawable.pen_default, R.drawable.pen_default, R.drawable.pen_default
+            R.drawable.pen_star, R.drawable.pen_illusion, R.drawable.pen_default, R.drawable.pen_default, R.drawable.pen_default
     };
 
     public final static String[] penName = {
@@ -126,6 +126,7 @@ public class PenUtils {
                 basePen = new StarPen(activity, backgroundResId);
                 break;
             case TYPE_ILLUSION:
+                basePen = new IllusionPen(activity, backgroundResId);
                 break;
             case TYPE_FIREFLY:
                 break;
