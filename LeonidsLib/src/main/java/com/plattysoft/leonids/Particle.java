@@ -34,8 +34,8 @@ public class Particle {
 	private Matrix mMatrix;
 	private Paint mPaint;
 
-	private float mInitialX;
-	private float mInitialY;
+	public float mInitialX;
+	public float mInitialY;
 
 	private float mRotation;
 
@@ -100,7 +100,9 @@ public class Particle {
 		mMatrix.postScale(mScale, mScale, mBitmapHalfWidth, mBitmapHalfHeight);
 		mMatrix.postTranslate(mCurrentX, mCurrentY);
 		mPaint.setAlpha(mAlpha);
+		// TODO add by simon at 2017/03/13
 		mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.ADD));
+		//
 		c.drawBitmap(mImage, mMatrix, mPaint);
 	}
 

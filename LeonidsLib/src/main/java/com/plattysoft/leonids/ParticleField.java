@@ -32,11 +32,9 @@ class ParticleField extends View {
 		super.onDraw(canvas);
 		// Draw all the particles
 		synchronized (mParticles) {
-			//int saveCount = canvas.save();
 			for (int i = 0; i < mParticles.size(); i++) {
 				mParticles.get(i).draw(canvas);
 			}
-			//canvas.restoreToCount(saveCount);
 		}
 	}
 }

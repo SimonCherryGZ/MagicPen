@@ -1,8 +1,8 @@
 package com.plattysoft.leonids.initializers;
 
-import java.util.Random;
-
 import com.plattysoft.leonids.Particle;
+
+import java.util.Random;
 
 public class SpeeddModuleAndRangeInitializer implements ParticleInitializer {
 

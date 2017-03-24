@@ -76,11 +76,18 @@ public class ParticleSystem {
 
         @Override
         public void run() {
-            if(mPs.get() != null) {
-                ParticleSystem ps = mPs.get();
-                ps.onUpdate(ps.mCurrentTime);
-                ps.mCurrentTime += TIMMERTASK_INTERVAL;
-            }
+			// TODO modify by simon at 2017/03/20
+//            if(mPs.get() != null) {
+//                ParticleSystem ps = mPs.get();
+//                ps.onUpdate(ps.mCurrentTime);
+//                ps.mCurrentTime += TIMMERTASK_INTERVAL;
+//            }
+
+			ParticleSystem ps = mPs.get();
+			if(ps != null) {
+				ps.onUpdate(ps.mCurrentTime);
+				ps.mCurrentTime += TIMMERTASK_INTERVAL;
+			}
         }
     }
 
