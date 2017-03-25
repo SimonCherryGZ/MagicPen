@@ -37,7 +37,7 @@ public class PenUtils {
     public final static int[] penResId = {
             R.drawable.pen_gel, R.drawable.pen_default, R.drawable.pen_default, R.drawable.pen_default, R.drawable.pen_default,
             R.drawable.pen_default, R.drawable.pen_default, R.drawable.pen_clover, R.drawable.pen_purple, R.drawable.pen_flower,
-            R.drawable.pen_colorful, R.drawable.pen_heart, R.drawable.pen_halo, R.drawable.pen_default, R.drawable.pen_default,
+            R.drawable.pen_colorful, R.drawable.pen_heart, R.drawable.pen_halo, R.drawable.pen_default, R.drawable.pen_flipped,
             R.drawable.pen_star, R.drawable.pen_illusion, R.drawable.pen_default, R.drawable.pen_default, R.drawable.pen_default
     };
 
@@ -124,6 +124,7 @@ public class PenUtils {
             case TYPE_SNOW:
                 break;
             case TYPE_FLIPPED:
+                basePen = new FlippedPen(activity, backgroundResId);
                 break;
             case TYPE_STAR:
                 basePen = new StarPen(activity, backgroundResId);
