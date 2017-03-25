@@ -6,12 +6,14 @@ import com.plattysoft.leonids.Particle;
 
 public class CurveModifier implements ParticleModifier {
 
+	private float mAngle;
 	private float mVelocity;
 	private float mVelocityX;
 	private float mVelocityY;
 
-	public CurveModifier(float velocity) {
+	public CurveModifier(float velocity, float angle) {
 		mVelocity = velocity;
+		mAngle = angle;
 	}
 
 	@Override
@@ -22,9 +24,9 @@ public class CurveModifier implements ParticleModifier {
 		while (angle < 0) {
 			angle+=360;
 		}
-		angle += 90;
+		angle+=mAngle;
 		while (angle >= 360) {
-			angle -= 360;
+			angle-=360;
 		}
 		Log.e("angle", String.valueOf(angle));
 		float velocityAngleInRads = (float) (angle*Math.PI/180f);

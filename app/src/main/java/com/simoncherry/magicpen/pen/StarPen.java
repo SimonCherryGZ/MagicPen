@@ -42,9 +42,16 @@ public class StarPen extends BasePen {
         ps.setSpeedRange(0.08f, 0.08f);
         ps.setRotationSpeedRange(180, 360);
         ps.setInitialRotationRange(0, 180);
-        ps.addModifier(new CurveModifier(0.0001f));
+        ps.addModifier(new CurveModifier(0.0001f, 90));
         ps.setFadeOut(1000, new AccelerateInterpolator());
         ps.emit(x, y, 25);
         return ps;
+
+//        ParticleSystem ps = new ParticleSystem(activity, 250, R.drawable.halo_purple1, 3000, backgroundResId);
+//        ps.setScaleRange(0.5f, 0.5f);
+//        ps.setSpeedRange(0.3f, 0.3f);
+//        ps.addModifier(new AlphaModifier(255, 0, 0, 3000));
+//        ps.addModifier(new CurveModifier(0.001f, 135));
+//        ps.emit(x, y, 10);
     }
 }
